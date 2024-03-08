@@ -8,7 +8,7 @@ public class TestData {
 	public String senhaValida = "Omby3opNzM";
 	public String massaInvalida = "1111";
 	public String mensagemErro = "Error: Incorrect login or password provided.";
-	public String caminhoArquivo = "./target/evidencias";
+	public String caminhoArquivo = "./target/evidencias/login";
 	
 
 }

@@ -17,12 +17,12 @@ Feature: login
     Scenario: login dados em branco
     When nao preencher os campos obrigatorio
     And clicar no botao login
-    Then mensagem de erro
+    Then mensagem de erro em branco
     
     Scenario: login dados invalidos
     When preencher usuario incorreto
     And preencher senha incorreta 
     And clicar no botao login
-    Then mensagem de erro 
+    Then mensagem de erro invalido
     
  

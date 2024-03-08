@@ -31,7 +31,7 @@ public class LoginSteps {
 	@Then("login efetuado com sucesso")
 	public void loginEfetuadoComSucesso() {
 		page.validarUrl(td.urllogado);
-		page.evidencias(td.caminhoArquivo);
+		page.evidencias(td.caminhoArquivo + "/loginSucesso.png");
 		Executa.encerrarTest();
 	}
 
@@ -55,10 +55,17 @@ public class LoginSteps {
 		page.clicarBtn();
 	}
 
-	@Then("mensagem de erro")
-	public void mensagemDeErro() {
+	@Then("mensagem de erro em branco")
+	public void mensagemDeErroEmBranco() {
 		page.validarMsgError(td.mensagemErro);
-		page.evidencias(td.caminhoArquivo+"/teste.png");
+		page.evidencias(td.caminhoArquivo + "/dadosBranco.png");
+		Executa.encerrarTest();
+	}
+
+	@Then("mensagem de erro invalido")
+	public void mensagemDeErroInvalido() {
+		page.validarMsgError(td.mensagemErro);
+		page.evidencias(td.caminhoArquivo + "/dadosIncorretos.png");
 		Executa.encerrarTest();
 	}
 
